@@ -13,8 +13,8 @@ To start you're going to build your very first copilot powered by Generative ans
 1. Open Microsoft Edge and navigate to <https://copilotstudio.microsoft.com>
 2. Log in with
 
-   - Username: +++@lab.CloudCredential(TCLAB200CredPool).Username+++
-   - Password: +++@lab.CloudCredential(TCLAB200CredPool).Password+++
+   - Username: +++@lab.CloudPortalCredential(User1).Username+++
+   - Password: +++@lab.CloudPortalCredential(User1).Password+++
 
 3. Click the Environment drop down in the top right and then select the Dev environment ENV{LAB_INSTANCE_ID}
 
