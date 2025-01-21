@@ -81,7 +81,7 @@ To start you're going to build your very first copilot powered by Generative ans
 
 15. The agent is now ready to be tested go ahead and type "Provide an executive summary report for Microsoft" (without the double quotes) or select it from the **Starter prompts**
 
-<add one more screenshot>
+![refresh](media/reply.png)
 
 **Fine-tune your agent**
 
@@ -91,55 +91,55 @@ In the previous steps the agent was not returning the most up to date values in 
 - include the board in the report
 - Finally the changes will be tested and published to M365 Copilot so that is available on BizChat
 
-1. Enable the **Web browsing** toggle in the **Additional settings** section
+16. Enable the **Web browsing** toggle in the **Additional settings** section
 
 ![web browsing](media/webbrowsing.png)
 
-2. Click on the arrow on the top to refresh the agent and type "Provide an executive summary report for Microsoft" (without the double quotes)
+17. Click on the arrow on the top to refresh the agent and type "Provide an executive summary report for Microsoft" (without the double quotes)
 
 ![agent refresh](media/refresh.png)
 
-3. Verify that the agent is now returning more recent information.
+18. Verify that the agent is now returning more recent information.
    ![up to date information](media/uptodateinfo.png)
 
-4. Click **Edit**
+19. Click **Edit**
 
 ![edit agent](media/edit.png)
 
-5. In the **Instructions** section text box add "-board members" before "- Number of Employees" and click **Save**
+20. In the **Instructions** section text box add "-board members" before "- Number of Employees" and click **Save**
 
 ![edit instructions](media/board.png)
 
-6. Click on the Refresh button and type "Provide an executive summary report for Microsoft" (without the double quotes)
+21. Click on the Refresh button and type "Provide an executive summary report for Microsoft" (without the double quotes)
 
 ![agent refresh](media/refresh.png)
 
 > So far the agent has been only tested in Copilot Studio, in the next steps the agent will be published to M365 Copilot to be availabe in the Bizchat
 
-7. Verify that the agent is now returning board information and click **Publish**
+22. Verify that the agent is now returning board information and click **Publish**
 
 ![publish agent](media/publish.png)
 
-8. Define the agent properties and click **Publish**, leaving the pre populates fields as is
+23. Define the agent properties and click **Publish**, leaving the pre populated fields as is
 
 ![publish agent](media/publish2.png)
 
-9. The publishing process starts, when it finishes (it can take a couple of minutes),
+24. The publishing process starts, when it finishes (it can take a couple of minutes),
 
 ![publish agent](media/publish3.png)
 
-10. Click **Copy**, open Microsoft Edge and paste the url.
+25. Click **Copy**, open Microsoft Edge and paste the url.
 
 ![publish agent](media/publish4.png)
 
-11. To acess the declarative agent in m365 bizchat click **Add**
+26. To acess the declarative agent in m365 bizchat click **Add**
 
 ![add agent to teams](media/addbottoteams.png)
 
-12. Find you agent name on the right menu in bizchat and click it
+27. Find you agent name on the right menu in bizchat and click it
 
 ![bizchat](media/bizchat.png)
 
-13. Type "Provide an executive summary report for Ford" (without the double quotes)
+28. Type "Provide an executive summary report for Ford" (without the double quotes)
 
-<add screenshot>
+![Ford Report](media/ford.png)
