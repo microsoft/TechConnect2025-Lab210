@@ -1,6 +1,6 @@
 **Build M365 Declarative Agents & API Actions with Copilot Studio Workshop**
 
--->In this lab you’ll work with Microsoft Copilot Studio to build your first copilot using Generative answers, you’ll then publish this copilot to Microsoft Teams.-->>
+-->In this lab you’ll work with Microsoft Copilot Studio to build your first declarative agent , you’ll then publish this copilot to Microsoft 365 Copilot
 
 In the second half of this workshop, you'll extend your copilot with an out of the box connector
 
