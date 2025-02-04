@@ -6,7 +6,17 @@ To perform this lab, you will need the following requirements:
   - Business
   - Enterprise
 
+
+To populate the accounts table in the CRM
+
+2. Open Microsoft Edge and navigate to <https://copilotstudio.microsoft.com>
+3. Log in with
+
+   - Username: +++@lab.CloudPortalCredential(User1).Username+++
+   - Password: +++@lab.CloudPortalCredential(User1).Password+++
+
 Let's start with the first exercise
+
 
 # Login to VM
 
