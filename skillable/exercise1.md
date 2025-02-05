@@ -32,7 +32,7 @@ To start you're going to build your very first copilot powered by Generative ans
 
 7. Describe your agent by providing the following statement (without the double quotes) and click on the arrow
 
-```text
+```
 I would like to make an executive summary assistant. this assistant will take company name as user prompt and create a summary report highlighting key details about the company. the knowledge about the company can come from publicly available information or internal data sources
 ```
 
@@ -46,7 +46,7 @@ I would like to make an executive summary assistant. this assistant will take co
 
 9. Describe your agent refined instructions by providing the following statement (without the double quotes) and click on the arrow
 
-   ```text
+   ```
    Summary Report must include following sessions:
    - Company history
    - Number of employees
