@@ -1,12 +1,12 @@
-**Build M365 Declarative Agents & API Actions with Copilot Studio Workshop**
+## Build M365 Declarative Agents & API Actions with Copilot Studio Workshop
 
--->In this lab you’ll work with Microsoft Copilot Studio to build your first declarative agent , you’ll then publish this copilot to Microsoft 365 Copilot
+In this lab you’ll first work with Microsoft Copilot Studio to build your first declarative agent, you’ll then publish this copilot to Microsoft 365 Copilot. Next, in the second half of this workshop, you'll extend your copilot with an out of the box connector.
 
-In the second half of this workshop, you'll extend your copilot with an out of the box connector
+> The green text with the **T** icon can be clicked on and will be typed automatically into the VM, For example, please click in the password text box and then click the password: **Passw0rd!**
+>
+> > **NOTE:** To ensure text is entered accurately avoid interacting or clicking in the VM until the text has finished being typed
 
-The green text with the **T** icon can be clicked on and will be typed automatically into the VM, For example, please click in the password text box and then click the password: **Passw0rd!** **NOTE:** To ensure text is entered accurately avoid interacting or clicking in the VM until the text has finished being typed
-
-**Build your first agent**
+### Build your first agent
 
 To start you're going to build your very first copilot powered by Generative answers.
 
@@ -16,9 +16,7 @@ To start you're going to build your very first copilot powered by Generative ans
    - Username: +++@lab.CloudPortalCredential(User1).Username+++
    - Password: +++@lab.CloudPortalCredential(User1).Password+++
 
-3. Click the Environment drop down in the top right and then select the Dev environment ENV{LAB_INSTANCE_ID}
-
-![environment selection](media/env.jpg)
+3. Click the Environment drop down to make sure you have the default environment selected.
 
 4. In the left nav click **Agents** to start creating a new copilot
 
@@ -34,11 +32,13 @@ To start you're going to build your very first copilot powered by Generative ans
 
 7. Describe your agent by providing the following statement (without the double quotes) and click on the arrow
 
-"i would like to make an executive summary assistant. this assistant will take company name as user prompt and create a summary report highlighting key details about the company. the knowledge about the company can come from publicly available information or internal data sources"
+```text
+I would like to make an executive summary assistant. this assistant will take company name as user prompt and create a summary report highlighting key details about the company. the knowledge about the company can come from publicly available information or internal data sources
+```
 
 ![description](media/description.png)
 
-8. Give your agent a name and click on the arrow
+8. Give your agent a new neme or use the suggested one by typing `yes` and click on the arrow.
 
 ![agent name](media/agentname.png)
 
@@ -46,17 +46,18 @@ To start you're going to build your very first copilot powered by Generative ans
 
 9. Describe your agent refined instructions by providing the following statement (without the double quotes) and click on the arrow
 
-"Summary Report must include following sessions :
-
-- Company history
-- Number of employees
-- recent news about the company
-- any business done in the company in the last two years
-  -Dividend per share history for the last five years in a table with columns for dividend and year."
+   ```text
+   Summary Report must include following sessions:
+   - Company history
+   - Number of employees
+   - Recent news about the company
+   - Any business done in the company in the last two years
+   - Dividend per share history for the last five years in a table with columns for dividend and year.
+   ```
 
 ![agent behavior](media/agentbehavior.png)
 
-10. Define your agent response behavior by providing the following statement "formal and detailed" (without the double quotes) and click on the arrow
+10. Define your agent response behavior by typing `formal and detailed` and click on the arrow.
 
 ![agent behavior](media/createbot.png)
 
@@ -70,8 +71,8 @@ To start you're going to build your very first copilot powered by Generative ans
 
 13. Edit the first start prompt with the following values
 
-- Title : Executive Summary Report
-- Prompt : Provide an executive summary report for Microsoft, and click **Save**
+- Title : `Executive Summary Report`
+- Prompt : `Provide an executive summary report for Microsoft`, and click **Save**
 
 ![start prompt creation](media/editstarterprompt.png)
 
@@ -79,17 +80,18 @@ To start you're going to build your very first copilot powered by Generative ans
 
 ![refresh](media/refresh2.png)
 
-15. The agent is now ready to be tested go ahead and type "Provide an executive summary report for Microsoft" (without the double quotes) or select it from the **Starter prompts**
+15. The agent is now ready to be tested go ahead and type `Provide an executive summary report for Microsoft` or select it from the **Starter prompts**
 
 ![refresh](media/reply.png)
 
-**Fine-tune your agent**
+### Fine-tune your agent
 
 In the previous steps the agent was not returning the most up to date values in the next steps the agent will be fine-tunned to:
 
-- display the most up to date values (LLM do not have the most recent information)
-- include the board in the report
-- Finally the changes will be tested and published to M365 Copilot so that is available on BizChat
+- Display the most up to date values (LLM do not have the most recent information)
+- Include the board in the report
+
+Finally the changes will be tested and published to M365 Copilot so that is available on BizChat.
 
 16. Enable the **Web browsing** toggle in the **Additional settings** section
 
@@ -100,7 +102,7 @@ In the previous steps the agent was not returning the most up to date values in 
 ![agent refresh](media/refresh.png)
 
 18. Verify that the agent is now returning more recent information.
-   ![up to date information](media/uptodateinfo.png)
+    ![up to date information](media/uptodateinfo.png)
 
 19. Click **Edit**
 
