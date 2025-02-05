@@ -24,7 +24,7 @@ In the following steps, we populate the **Account** table in Dataverse with some
 
    ![data import settings ](media/dataimport6.png)
 
-The account information has now been populated in the account table, let´s now start the Copilot Studio required configurations
+The account information has now been populated in the account table, let's now start the Copilot Studio required configurations
 
 ### Grounding the Agent
 
