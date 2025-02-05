@@ -4,60 +4,26 @@ In this exercise the agent will be configured to ground the executive summary re
 
 In the next steps the account information will be populated into the Accounts table
 
-1. Open Microsoft Edge and browse to https://github.com/microsoft/TechConnect2025-Lab210/blob/main/skillable/accounts.csv to download the cvs file that countains information regarding the account revenue
+1. On Microsoft Edge browse to [https://make.powerapps.com/environments/default-4cfe372a-37a4-44f8-91b2-5faf34253c62/entities/70816501-edb9-4740-a16c-6a5efbc05d84](https://make.powerapps.com/environments/default-4cfe372a-37a4-44f8-91b2-5faf34253c62/entities/70816501-edb9-4740-a16c-6a5efbc05d84)
 
-2.Click the **...** on the top
+![data import settings ](media/dataimport1.png)
 
-![git ...](media/gitdownload1.png)
+2. Click on the bottom arrow
 
-3. Click **Download**
+![data import settings ](media/dataimport2.png)
 
-![git ...](media/gitdownload2.png)
+3. Type "Annual" on the search text box
 
-3. Click **Save as**
+![data import settings ](media/dataimport3.png)
 
-![git ...](media/gitdownload3.png)
+4. Select **Annual Revenue** and click **Save**
 
-4. Click **Save** to save the file in the Downloads folder
+5. Type "Microsoft" for the Account Name and 1000000 for the Annual Revenue
 
-![git ...](media/gitdownload4.png)
-
-5. On Microsoft Edge browse to https://make.powerapps.com/environments/default-4cfe372a-37a4-44f8-91b2-5faf34253c62/entities/70816501-edb9-4740-a16c-6a5efbc05d84
-
-6. Click  **Import** on the top
-
-![data import ](media/dataimport1.png)
-
-6. Click  **Browse** 
-
-![data import ](media/dataimport2.png)
-
-7. Click on the accounts.csv file that was dowloaded before in the Downloads folder
-
-8. Click **Open**
-
-9. Click **Sign in**
-
-TO-DO screen
-
-10. Click **Next**
-
-TO-DO screen
-
-11. Click **Next**
-
-TO-DO screen
-
-13. Click **Load to existing table** and select "Account" on the **Destination table** dropdown list, finaly click **Next**
+6. Type "Ford" for the Account Name and 2000000 for the Annual Revenue
 
 ![data import settings ](media/dataimport6.png)
 
-14. Click **Publish** to start the import process, this can take a couple of minutes
-
-![data import publish ](media/dataimport7.png)
-
-
-TO-DO screen
 
 The account information has now been populated in the account table , let´s now start the Copilot Studio required configurations
 
