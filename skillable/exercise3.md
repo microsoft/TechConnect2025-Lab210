@@ -42,27 +42,27 @@ The account information has now been populated in the account table, let´s now 
 
 5. In the dialog box that opens up with the list of the actions, search for **list rows**, and select the **List rows from selected environment** action from the list of results
 
-![Update Instructions](media/instrcutionsupdate.png)
+   ![Update Instructions](media/instrcutionsupdate.png)
 
-6.  Search for **list rows**, scroll down until **List rows from selected environment** is displayed and click on it
+6. Search for **list rows**, scroll down until **List rows from selected environment** is displayed and click on it
 
-    ![Add action](media/listrowsfromselectedenvironment.png)
+   ![Add action](media/listrowsfromselectedenvironment.png)
 
-7.  Click **Next** to create a Dataverse connection
+7. Click **Next** to create a Dataverse connection
 
-    ![Dataverse Connection](media/dataverseconnect.png)
+   ![Dataverse Connection](media/dataverseconnect.png)
 
-8.  Provide the value "List existing accounts with account revenue" in the fields:
+8. Provide the value `List existing accounts with account revenue` for the following fields:
 
-    - Name
-    - Description for the agent to know when to use this action
-    - Usage Description
+   - Name
+   - Description for the agent to know when to use this action
+   - Usage Description
 
-    ![Add action](media/actiondescr.png)
+   ![Add action](media/actiondescr.png)
 
-9.  Expand **Inputs and outputs**, and scroll down to the **Environment** section
+9. Expand **Inputs and outputs**, and scroll down to the **Environment** section
 
-    ![Inputs and outputs](media/inputsoutputs.png)
+   ![Inputs and outputs](media/inputsoutputs.png)
 
 10. Select **Set as value** in the drop down list
 
@@ -73,9 +73,11 @@ The account information has now been populated in the account table, let´s now 
     ![Org url](media/orgurl.png)
 
     > You can get the environment url by selecting the **Settings** icon in the **CoPilot Studio** top bar, and selecting session details from the side bar that opens up, as shown below:
+    >
     > ![Session Details](media/sessiondetails.png)
     >
-    > From the dialog bocx that opens up, you can copy the highlighted url:
+    > From the dialog box that opens up, you can copy the highlighted url:
+    >
     > ![Dataverse Environment URL](media/sessiondetails_1.png)
 
 12. Click **Table name**
