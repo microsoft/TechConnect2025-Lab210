@@ -1,126 +1,107 @@
-**Ground the agent responses in enterprise data**
+## Ground the agent responses in enterprise data
 
 In this exercise the agent will be configured to ground the executive summary report with the information available in company´s CRM system. The report will include information about the revenue, that is stored in the Account table in the Dataverse (CRM System).
 
-In the next steps the account information will be populated into the Accounts table
+### Populate Test Data
 
-1. On Microsoft Edge browse to [https://make.powerapps.com/environments/default-4cfe372a-37a4-44f8-91b2-5faf34253c62/entities/70816501-edb9-4740-a16c-6a5efbc05d84](https://make.powerapps.com/environments/default-4cfe372a-37a4-44f8-91b2-5faf34253c62/entities/70816501-edb9-4740-a16c-6a5efbc05d84)
+In the following steps, we populate the **Account** table in Dataverse with some test data:
 
-![data import settings ](media/dataimport1.png)
+1. Launch a new Microsoft Edge browser or tab, go to PowerApps Maker Portal at <https://make.powerapps.com>, and select **Tables** in the left menu
 
-2. Click on the bottom arrow
+   ![data import settings ](media/dataimport1_1.png)
 
-![data import settings ](media/dataimport2.png)
+2. From the list of tables shown click on the **Account** table
 
-3. Type "Annual" on the search text box
+   ![data import settings ](media/dataimport2_1.png)
 
-![data import settings ](media/dataimport3.png)
+3. Now, Click on the bottom arrow as shown below, type `Annual` on the search text box, select **Annual Revenue** from the list shown, and click **Save** button
 
-4. Select **Annual Revenue** and click **Save**
+   ![data import settings ](media/dataimport3_1.png)
 
-5. Type "Microsoft" for the Account Name and 1000000 for the Annual Revenue
+4. In the **Account columns and data** section, add a new row with `Microsoft` as the Account Name and `1000000` as the Annual Revenue.
 
-6. Type "Ford" for the Account Name and 2000000 for the Annual Revenue
+5. Also, add another row with `Ford` as the Account Name and `2000000` as the Annual Revenue. After these rows are added, you table should now have two new rows as shown below
 
-![data import settings ](media/dataimport6.png)
+   ![data import settings ](media/dataimport6.png)
 
+The account information has now been populated in the account table, let´s now start the Copilot Studio required configurations
 
-The account information has now been populated in the account table , let´s now start the Copilot Studio required configurations
+### Grounding the Agent
 
+1. In case you have closed the Copilot Studio tab, Launch Microsoft Edge, or open a new browser Tab and navigate to <https://copilotstudio.microsoft.com>
 
-1. Case you have closed the Copilot Studio tab do the following steps otherwise skip to step 5
+2. Select **Library** on the left menu, find your agent's name in the list displayed and click it
 
-2. Open Microsoft Edge and navigate to <https://copilotstudio.microsoft.com>
+   ![Select Library](media/botlist_1.png)
 
-3. Select **Library** on the left menu
+3. Edit your agent instructions by adding the following statement `  - Primary Contact, must be retrieved from internal data sources without any citation, writing only the name` after the statement `- Dividend per share history for the last five years in a table with columns for dividend and year.` and **Save**
 
-![Select Library](media/library.png)
+4. Next, scroll down to **Actions** section and click **Add action** button.
 
-4. Find your agent name in the list displayed and click on it
+   ![Add Action](media/addaction_1.png)
 
-![Select Library](media/botlist.png)
-
-
-5. edit your agent instructions by adding the following statement "- Primary Contact, must be retrieved from internal data sources without any citation, writing only the name" after "- Dividend per share history for the last five years in a table with columns for dividend and year." 
-
-6. Click **Add action**, the connector list is displayed
-
-<add screenshot>
+5. In the dialog box that opens up with the list of the actions, search for **list rows**, and select the **List rows from selected environment** action from the list of results
 
 ![Update Instructions](media/instrcutionsupdate.png)
 
-6.  Search for **list rows**, scroll down until **List rows from selected environment** is displayed and click on it (highlight search box)
+6.  Search for **list rows**, scroll down until **List rows from selected environment** is displayed and click on it
 
-![Add action](media/listrowsfromselectedenvironment.png)
+    ![Add action](media/listrowsfromselectedenvironment.png)
 
-7. Click **Next** to create a Dataverse connection
+7.  Click **Next** to create a Dataverse connection
 
-![Dataverse Connection](media/dataverseconnect.png)
+    ![Dataverse Connection](media/dataverseconnect.png)
 
-8. Provide the value "List existing accounts with account revenue" in the fields:
-- Name
-- Description for the agent to know when to use this action
-- Usage Description
+8.  Provide the value "List existing accounts with account revenue" in the fields:
 
-![Add action](media/actiondescr.png)
+    - Name
+    - Description for the agent to know when to use this action
+    - Usage Description
 
-9. Expand **Inputs and outputs** and scroll down
+    ![Add action](media/actiondescr.png)
 
-10. Click **Environment**
+9.  Expand **Inputs and outputs**, and scroll down to the **Environment** section
 
-![Inputs and outputs](media/inputsoutputs.png)
+    ![Inputs and outputs](media/inputsoutputs.png)
 
-11. Select **Set as value** in the drop down list
+10. Select **Set as value** in the drop down list
 
-![Agent Input](media/agentinput.png)
+    ![Agent Input](media/agentinput.png)
 
-12. Type the url provided in the **Value** textbox and click **Done**
+11. Type the url of your Dataverse environment in the **Value** textbox and click **Done**
 
-![Org url](media/orgurl.png)
+    ![Org url](media/orgurl.png)
 
+    > You can get the environment url by selecting the **Settings** icon in the **CoPilot Studio** top bar, and selecting session details from the side bar that opens up, as shown below:
+    > ![Session Details](media/sessiondetails.png)
+    >
+    > From the dialog bocx that opens up, you can copy the highlighted url:
+    > ![Dataverse Environment URL](media/sessiondetails_1.png)
 
+12. Click **Table name**
 
-13. Click **Table name**
+    ![Agent Input](media/tableinput.png)
 
-![Agent Input](media/tableinput.png)
+13. Select **Set as value** in the drop down list
 
-14. Select **Set as value** in the drop down list
+    ![Table Input](media/selectaccount.png)
 
-![Table Input](media/selectaccount.png)
+14. Type "accounts" in the **Value** textbox and click **Done**
 
-15. Type "accounts" in the **Value** textbox and click **Done**
+15. Click **Add Action**
 
-16. Click **Add Action**
+    ![Add Action](media/addaction2.png)
 
-![Add Action](media/addaction2.png)
+16. Click **Save**
 
-17. Click **Save**
+    ![Add Action](media/savebot.png)
 
-![Add Action](media/savebot.png)
+17. Refresh the declarative agent [step 14 in exercise 1]
 
-18. Refresh the declarative agent [step 14 in exercide 1] 
+The agent is now configured to include information about the revenue, that is stored in the Account table in the Dataverse (CRM System)
 
-The agent is now configured to include information about the revenue, that is stored in the Account table in the Dataverse (CRM System) 
+19. Select "Provide an executive summary report for Microsoft" from the Starter prompts and verify the a new section **Account Revenue** is shown in the response
 
-19. Select "Provide an executive summary report for Microsoft" from the Starter prompts and verify the a new section revenue is returned
+    ![Revenue](media/revenue.png)
 
-![Revenue](media/revenue.png)
-
-20. Publish the bot like it has been done [step 22-26 in exercise 1] , clik **Update** on the last step
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+20. Publish the bot like it has been done in Excerise 1 (steps 22 to 26), and click **Update** on the last step.

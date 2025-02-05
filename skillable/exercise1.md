@@ -123,9 +123,11 @@ So far the agent has been only tested in Copilot Studio, in the next steps the a
 
     ![publish agent](media/publish2.png)
 
-24. The publishing process starts, and shows following dialog. It can take a couple of minutes for the publishing process to finish, please wait and keep this dialog displayed until the publishing is complete.
+24. The publishing process starts, and shows following dialog.
 
     ![publish agent](media/publish3.png)
+
+    It can take a couple of minutes for the publishing process to finish, please wait and keep this dialog displayed until the publishing is complete.
 
 25. Now, Click **Copy** button under the **Share link** section
 
