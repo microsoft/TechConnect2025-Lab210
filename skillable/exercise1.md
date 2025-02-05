@@ -1,12 +1,12 @@
-**Build M365 Declarative Agents & API Actions with Copilot Studio Workshop**
+## Build M365 Declarative Agents & API Actions with Copilot Studio Workshop
 
--->In this lab you’ll work with Microsoft Copilot Studio to build your first declarative agent , you’ll then publish this copilot to Microsoft 365 Copilot
+In this lab you’ll first work with Microsoft Copilot Studio to build your first declarative agent, you’ll then publish this copilot to Microsoft 365 Copilot. Next, in the second half of this workshop, you'll extend your copilot with an out of the box connector.
 
-In the second half of this workshop, you'll extend your copilot with an out of the box connector
+> The green text with the **T** icon can be clicked on and will be typed automatically into the VM, For example, please click in the password text box and then click the password: **Passw0rd!**
+>
+> > **NOTE:** To ensure text is entered accurately avoid interacting or clicking in the VM until the text has finished being typed
 
-The green text with the **T** icon can be clicked on and will be typed automatically into the VM, For example, please click in the password text box and then click the password: **Passw0rd!** **NOTE:** To ensure text is entered accurately avoid interacting or clicking in the VM until the text has finished being typed
-
-**Build your first agent**
+### Build your first agent
 
 To start you're going to build your very first copilot powered by Generative answers.
 
@@ -16,130 +16,131 @@ To start you're going to build your very first copilot powered by Generative ans
    - Username: +++@lab.CloudPortalCredential(User1).Username+++
    - Password: +++@lab.CloudPortalCredential(User1).Password+++
 
-3. Click the Environment drop down in the top right and then select the Dev environment ENV{LAB_INSTANCE_ID}
-
-![environment selection](media/env.jpg)
+3. Click the Environment drop down to make sure you have the default environment selected.
 
 4. In the left nav click **Agents** to start creating a new copilot
 
-![create agent](media/create.png)
+   ![create agent](media/create.png)
 
 5. Click **Copilot for Microsoft 365**
 
-![create agent](media/agents.png)
+   ![create agent](media/agents.png)
 
 6. Click **Add** button on the section agents
 
-![add button](media/AddAgent.png)
+   ![add button](media/AddAgent.png)
 
 7. Describe your agent by providing the following statement (without the double quotes) and click on the arrow
 
-"i would like to make an executive summary assistant. this assistant will take company name as user prompt and create a summary report highlighting key details about the company. the knowledge about the company can come from publicly available information or internal data sources"
+   ```
+   I would like to make an executive summary assistant. this assistant will take company name as user prompt and create a summary report highlighting key details about the company. the knowledge about the company can come from publicly available information or internal data sources
+   ```
 
-![description](media/description.png)
+   ![description](media/description.png)
 
-8. Give your agent a name and click on the arrow
+8. Give your agent a new neme or use the suggested one by typing `yes` and click on the arrow.
+   ![agent name](media/agentname.png)
 
-![agent name](media/agentname.png)
-
-![agent name](media/instructons.png)
+   ![agent name](media/instructons.png)
 
 9. Describe your agent refined instructions by providing the following statement (without the double quotes) and click on the arrow
 
-"Summary Report must include following sessions :
+   ```
+   Summary Report must include following sessions:
+   - Company history
+   - Number of employees
+   - Recent news about the company
+   - Any business done in the company in the last two years
+   - Dividend per share history for the last five years in a table with columns for dividend and year.
+   ```
 
-- Company history
-- Number of employees
-- recent news about the company
-- any business done in the company in the last two years
-  -Dividend per share history for the last five years in a table with columns for dividend and year."
+   ![agent behavior](media/agentbehavior.png)
 
-![agent behavior](media/agentbehavior.png)
-
-10. Define your agent response behavior by providing the following statement "formal and detailed" (without the double quotes) and click on the arrow
-
-![agent behavior](media/createbot.png)
+10. Define your agent response behavior by typing `formal and detailed` and click on the arrow.
+    ![agent behavior](media/createbot.png)
 
 11. Click **Create** to finish your agent
-
-![agent behavior](media/createbotbutton.png)
+    ![agent behavior](media/createbotbutton.png)
 
 12. Scroll down until the **Starter prompts** is displayed and click on the pencil icon
-
-![start prompt creation](media/starterprompts.png)
+    ![start prompt creation](media/starterprompts.png)
 
 13. Edit the first start prompt with the following values
 
-- Title : Executive Summary Report
-- Prompt : Provide an executive summary report for Microsoft, and click **Save**
+- Title : `Executive Summary Report`
+- Prompt : `Provide an executive summary report for Microsoft`, and click **Save** button
 
-![start prompt creation](media/editstarterprompt.png)
+  ![start prompt creation](media/editstarterprompt.png)
 
 14. Press the refresh icon, the start promtps will now be refreshed with the updated values
+    ![refresh](media/refresh2.png)
 
-![refresh](media/refresh2.png)
+15. The agent is now ready to be tested go ahead and type `Provide an executive summary report for Microsoft` or select it from the **Starter prompts**
+    ![refresh](media/reply.png)
 
-15. The agent is now ready to be tested go ahead and type "Provide an executive summary report for Microsoft" (without the double quotes) or select it from the **Starter prompts**
-
-![refresh](media/reply.png)
-
-**Fine-tune your agent**
+### Fine-tune your agent
 
 In the previous steps the agent was not returning the most up to date values in the next steps the agent will be fine-tunned to:
 
-- display the most up to date values (LLM do not have the most recent information)
-- include the board in the report
-- Finally the changes will be tested and published to M365 Copilot so that is available on BizChat
+- Display the most up to date values (LLM do not have the most recent information)
+- Include the information about the board members of the company
+
+Finally the changes will be tested and published to M365 Copilot so that is available on BizChat.
 
 16. Enable the **Web browsing** toggle in the **Additional settings** section
 
-![web browsing](media/webbrowsing.png)
+    ![web browsing](media/webbrowsing.png)
 
-17. Click on the arrow on the top to refresh the agent and type "Provide an executive summary report for Microsoft" (without the double quotes)
+17. Click on the arrow on the top to refresh the agent and type `Provide an executive summary report for Microsoft`, or select it from the **Starter prompts**
 
-![agent refresh](media/refresh.png)
+    ![agent refresh](media/refresh.png)
 
 18. Verify that the agent is now returning more recent information.
-   ![up to date information](media/uptodateinfo.png)
 
-19. Click **Edit**
+    ![up to date information](media/uptodateinfo.png)
 
-![edit agent](media/edit.png)
+19. Now, On the left side of you editor, scroll to the top to display the **Details** section, and Click **Edit**
+
+    ![edit agent](media/edit.png)
 
 20. In the **Instructions** section text box add "-board members" before "- Number of Employees" and click **Save**
 
-![edit instructions](media/board.png)
+    ![edit instructions](media/board.png)
 
 21. Click on the Refresh button and type "Provide an executive summary report for Microsoft" (without the double quotes)
 
-![agent refresh](media/refresh.png)
+    ![agent refresh](media/refresh.png)
 
-> So far the agent has been only tested in Copilot Studio, in the next steps the agent will be published to M365 Copilot to be availabe in the Bizchat
+### Publish the Agent
+
+So far the agent has been only tested in Copilot Studio, in the next steps the agent will be published to M365 Copilot to be availabe in the Bizchat
 
 22. Verify that the agent is now returning board information and click **Publish**
 
-![publish agent](media/publish.png)
+    ![publish agent](media/publish.png)
 
 23. Define the agent properties and click **Publish**, leaving the pre populated fields as is
 
-![publish agent](media/publish2.png)
+    ![publish agent](media/publish2.png)
 
-24. The publishing process starts, when it finishes (it can take a couple of minutes),
+24. The publishing process starts, and shows following dialog. It can take a couple of minutes for the publishing process to finish, please wait and keep this dialog displayed until the publishing is complete.
 
-![publish agent](media/publish3.png)
+    ![publish agent](media/publish3.png)
 
-25. Click **Copy**, open Microsoft Edge and paste the url.
+25. Now, Click **Copy** button under the **Share link** section
 
-![publish agent](media/publish4.png)
+    ![publish agent](media/publish4.png)
 
-26. To acess the declarative agent in m365 bizchat click **Add**
+26. Launch a new Microsoft Edge (or a new tab), paste the copied URL and hit **Enter**
 
-![add agent to teams](media/addbottoteams.png)
+27. On the page that opens, click **Add** button to acess your new declerative agent in M365 BizChat.
 
-27. Find you agent name on the right menu in bizchat and click it
+    ![add agent to teams](media/addbottoteams.png)
 
-![bizchat](media/bizchat.png)
+28. Find you agent name on the right menu in BizChat and click it
 
-28. Type "Provide an executive summary report for Ford" (without the double quotes)
+    ![bizchat](media/bizchat.png)
 
-![Ford Report](media/ford.png)
+29. Type `Provide an executive summary report for Ford` and hit **Enter**
+    to see the output.
+    ![Ford Report](media/ford.png)
