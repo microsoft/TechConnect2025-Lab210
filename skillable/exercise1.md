@@ -103,13 +103,13 @@ Finally the changes will be tested and published to M365 Copilot so that is avai
 
     ![edit agent](media/edit.png)
 
-20. In the **Instructions** section text box add "-board members" before "- Number of Employees" and click **Save**
+20. In the **Instructions** section text box add `- Board members` before `- Number of Employees` and click **Save**
 
     ![edit instructions](media/board.png)
 
-21. Click on the Refresh button and type "Provide an executive summary report for Microsoft" (without the double quotes)
+21. Click on the Refresh button and type `Provide an executive summary report for Microsoft` and hit **Enter**. You should now see that Board members information is included in the output.
 
-    ![agent refresh](media/refresh.png)
+    ![agent refresh](media/board2.png)
 
 ### Publish the Agent
 
@@ -141,6 +141,6 @@ So far the agent has been only tested in Copilot Studio, in the next steps the a
 
     ![bizchat](media/bizchat.png)
 
-29. Type `Provide an executive summary report for Ford` and hit **Enter**
-    to see the output.
+29. Type `Provide an executive summary report for Ford` and hit **Enter** to see the output
+
     ![Ford Report](media/ford.png)
