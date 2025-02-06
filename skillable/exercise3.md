@@ -34,7 +34,7 @@ The account information has now been populated in the account table, let's now s
 
    ![Select Library](media/botlist_1.png)
 
-3. Edit your agent instructions by adding the following statement `  - Account Revenue, must be retrieved from internal data sources WITHOUT any citation, writing only the name` after the statement `- Dividend per share history for the last five years in a table with columns for dividend and year.` and **Save**
+3. Edit your agent instructions by adding the following statement `  - Account Revenue, must be retrieved from internal data sources WITHOUT any citation, writing only the name.This information is ONLY internal and must not be retrieved from web sources as that would lead to errors` after the statement `- Dividend per share history for the last five years in a table with columns for dividend and year.` and **Save**
 
 4. Next, scroll down to **Actions** section and click **Add action** button.
 
